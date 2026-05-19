@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavItem from './NavItem';
 import { Menu, Search, Globe } from 'lucide-react';
-import Navitem from './NavItem';
+import Navitem from './Navitem';
 
 const navLinks = [
   { label: 'VEHICLES', hasDropdown: true, dropdownItems: ['SUVs', 'Sedans', 'EVs & Hybrids', 'All Cars'] },
