@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import NavItem from './NavItem';
 import { Menu, Search, Globe } from 'lucide-react';
 import Navitem from './Navitem';
 
