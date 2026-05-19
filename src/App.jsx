@@ -6,6 +6,7 @@ import Spotlight from './component/BottomSection/Spotlight';
 import NissanAtHome from './component/BottomSection/NissanHome';
 import Footer from './component/footer/Footer';
 import FloatingToolbar from './component/FloatingTool/FloatingToolbar';
+import NissanHome from './component/BottomSection/NissanHome';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
 
       <ProductRange />
       <Spotlight />
-      <NissanAtHome />
+      <NissanHome />
       <Footer />
     </div>
   );

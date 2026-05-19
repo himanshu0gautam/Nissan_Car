@@ -35,7 +35,7 @@ const services = [
   },
 ];
 
-export default function NissanAtHome() {
+export default function NissanHome() {
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto bg-white border-t border-gray-100">
       <div className="text-center mb-10">
