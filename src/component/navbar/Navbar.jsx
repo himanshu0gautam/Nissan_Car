@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NavItem from './NavItem';
 import { Menu, Search, Globe } from 'lucide-react';
+import Navitem from './NavItem';
 
 const navLinks = [
   { label: 'VEHICLES', hasDropdown: true, dropdownItems: ['SUVs', 'Sedans', 'EVs & Hybrids', 'All Cars'] },
@@ -28,7 +29,7 @@ export default function Navbar() {
 
       <div className="hidden lg:flex items-center pl-[38rem] space-x-6 text-xs font-semibold tracking-wider">
         {navLinks.map((link, index) => (
-          <NavItem
+          <Navitem
             key={index}
             label={link.label}
             hasDropdown={link.hasDropdown}

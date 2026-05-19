@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
 
-export default function NavItem({ label, hasDropdown, dropdownItems, isOpen, onMouseEnter, onMouseLeave }) {
+export default function Navitem({ label, hasDropdown, dropdownItems, isOpen, onMouseEnter, onMouseLeave }) {
   return (
     <div 
       className="relative py-2 cursor-pointer"
