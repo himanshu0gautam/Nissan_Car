@@ -15,7 +15,7 @@ export default function Navitem({ label, hasDropdown, dropdownItems, isOpen, onM
 
       {/* Production Dropdown Feature */}
       {hasDropdown && isOpen && (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white/95 backdrop-blur-md text-black rounded shadow-xl border border-gray-100 overflow-hidden animate-fadeIn">
+        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white/95 uppercase backdrop-blur-md text-black rounded shadow-xl border border-gray-100 overflow-hidden animate-fadeIn">
           <ul className="py-2">
             {dropdownItems.map((item, index) => (
               <li key={index}>

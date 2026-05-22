@@ -36,7 +36,7 @@ export default function Spotlight() {
               <h3 className="text-1xl tracking-[0.25em] font-medium text-black uppercase">{config.name}</h3>
               <a 
                 // href={`#configure-${config.id}`} 
-                className="inline-block text-[1rem] tracking-wider font-bold text-black uppercase border-b- border-b-black pb-0.5 hover:text-black hover:border-black transition-colors"
+                className="inline-block text-[1rem] tracking-wider font-bold text-black uppercase border-b-2 border-b-black pb-0.5 hover:text-black hover:border-black transition-colors"
               >
                 Configure Now
               </a>

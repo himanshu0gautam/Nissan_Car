@@ -37,7 +37,7 @@ const services = [
 
 export default function NissanHome() {
   return (
-    <section className="py-20 px-4 max-w-6xl mx-auto bg-white border-t border-gray-100">
+    <section className="pt-20 pb-7 px-4 max-w-6xl mx-auto bg-white border-t border-gray-100">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-medium tracking-wider text-black">
           Nissan@HOME
@@ -51,7 +51,6 @@ export default function NissanHome() {
         {services.map((service) => (
           <div key={service.id} className="flex flex-col justify-between group">
             <div>
-              {/* Aspect Ratio Boxed Thumbnail Image */}
               <div className="aspect-video w-full overflow-hidden bg-gray-50 mb-3">
                 <img
                   src={service.image}

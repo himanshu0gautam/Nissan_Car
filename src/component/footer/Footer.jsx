@@ -1,17 +1,6 @@
 import React from 'react';
-import { 
-  Compass, 
-  Download, 
-  MapPin, 
-  Wrench, 
-//   Facebook, 
-//   Youtube, 
-//   Instagram, 
-  CompassIcon,
-  DownloadCloud,
-  MapPinCheck,
-  WrenchIcon
-} from 'lucide-react';
+import { FaFacebook } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 // const actionItems = [
 //   { id: 1, label: "Book A Test Drive", icon: <CompassIcon className="w-8 h-8 stroke-[1.5]" /> },
@@ -93,10 +82,10 @@ export default function Footer() {
             </h4>
             <div className="flex items-center space-x-4 text-zinc-400">
               <a href="#facebook" className="hover:text-white transition-colors" aria-label="Facebook">
-                {/* <Faceboook className="w-5 h-5 fill-current stroke-none" /> */}
+                <FaFacebook className="w-5 h-5 fill-current stroke-none" />
               </a>
               <a href="#twitter" className="hover:text-white transition-colors" aria-label="X (Twitter)">
-                {/* <TwitterXIcon /> */}
+                <FaSquareXTwitter className="w-5 h-5 fill-current stroke-none" />
               </a>
               <a href="#youtube" className="hover:text-white transition-colors" aria-label="YouTube">
                 {/* <Youtube className="w-5 h-5" /> */}
