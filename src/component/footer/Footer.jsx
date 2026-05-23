@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
 
 // const actionItems = [
 //   { id: 1, label: "Book A Test Drive", icon: <CompassIcon className="w-8 h-8 stroke-[1.5]" /> },
@@ -87,11 +89,11 @@ export default function Footer() {
               <a href="#twitter" className="hover:text-white transition-colors" aria-label="X (Twitter)">
                 <FaSquareXTwitter className="w-5 h-5 fill-current stroke-none" />
               </a>
-              <a href="#youtube" className="hover:text-white transition-colors" aria-label="YouTube">
-                {/* <Youtube className="w-5 h-5" /> */}
-              </a>
               <a href="#instagram" className="hover:text-white transition-colors" aria-label="Instagram">
-                {/* <Instagram className="w-5 h-5" /> */}
+                <FaSquareInstagram className="w-5 h-5 fill-current stroke-none" />
+              </a>
+              <a href="#youtube" className="hover:text-white transition-colors" aria-label="YouTube">
+                <FaYoutube className="w-5 h-5 fill-current stroke-none" />
               </a>
             </div>
           </div>

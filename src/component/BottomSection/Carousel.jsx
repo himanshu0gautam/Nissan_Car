@@ -127,9 +127,54 @@ const Carousel = () => {
         </button>
       </div>
 
-      kjl
+      <div className="">
+        <div className="text-4xl font-medium tracking-wider flex justify-center items-center ">
+          <h1>What would you like to do?</h1>
+        </div>
+        <div className="text-1xl py-8 font-medium tracking-wider flex justify-center uppercase items-center gap-8">
+          <div className="flex flex-col justify-end items-center px-12 gap-3 py-4">
+            <img
+              className="overflow-hidden w-13"
+              src="https://imgs.search.brave.com/ur9M1mpsDmNgPL7654HNJ6PlzTI1reOrnTPqi-sQDJ4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL3ByZW1p/dW0vcG5nLTI1Ni10/aHVtYi9zdGVlcmlu/Zy0xNTc3Mzc2LTEz/Mzk2NDgucG5nP2Y9/d2VicCZ3PTEyOA"
+              alt=""
+            />
+            <h2 className="hover:border-b-2 transition text-[0.9rem] tracking-widest font-bold">
+              Book a test drive
+            </h2>
+          </div>
+          <div className="flex flex-col justify-end items-center px-12 gap-3">
+            <img
+              className="overflow-hidden w-13"
+              src="https://www.svgrepo.com/show/354930/document-download.svg"
+              alt=""
+            />
+            <h2 className="hover:border-b-2 transition text-[0.9rem] tracking-widest font-bold">
+              download brochure
+            </h2>
+          </div>
+          <div className="flex flex-col justify-end items-center px-12 gap-3">
+            <img
+              className="overflow-hidden w-13"
+              src="https://www.svgrepo.com/show/495437/location-minus.svg"
+              alt=""
+            />
+            <h2 className="hover:border-b-2 transition text-[0.9rem] tracking-widest font-bold">
+              find a dealer
+            </h2>
+          </div>
+          <div className="flex flex-col justify-end items-center px-12 gap-3">
+            <img
+              className="overflow-hidden w-13"
+              src="https://www.svgrepo.com/show/503007/car.svg"
+              alt=""
+            />
+            <h2 className="hover:border-b-2 transition text-[0.9rem] tracking-widest font-bold">
+              book a service
+            </h2>
+          </div>
+        </div>
+      </div>
     </div>
-
   );
 };
 
