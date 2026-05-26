@@ -3,10 +3,10 @@ import { ChevronDown } from "lucide-react";
 
 export default function Navitem({
   label,
-  isopen,
   hasDropdown,
   dropdownItems,
   isOpen,
+  onClick,
   onMouseEnter,
   onMouseLeave,
 }) {
@@ -16,7 +16,11 @@ export default function Navitem({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <button className="flex items-center space-x-1 uppercase hover:text-gray-300 transition-colors focus:outline-none bg-amber-400">
+      <button
+        type="button"
+        onClick={onClick}
+        className="flex items-center space-x-1 uppercase hover:text-gray-300 transition-colors focus:outline-none"
+      >
         <span>{label}</span>
         {hasDropdown && (
           <ChevronDown
