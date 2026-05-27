@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Menu, Search, Globe } from "lucide-react";
+import { Link, Links, useNavigate } from "react-router-dom";
 import Navitem from "./Navitem";
+import SideNavbar from "./SideNavbar";
 
 const navLinks = [
   { label: "VEHICLES", hasDropdown: false },
@@ -59,9 +61,13 @@ export default function Navbar({ onVehiclesClick, variant = "dark" }) {
     ? "bg-white text-black "
     : "bg-gradient-to-b from-black/80 via-black/40 to-transparent text-white";
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [NavOpen, setNavOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
-    <nav className={`absolute top-0 left-0 w-full z-50 ${navStyles} px-6 flex items-center justify-between`}>
+    <nav
+      className={`absolute top-0 left-0 w-full z-50 ${navStyles} px-6 flex items-center justify-between`}
+    >
       <div className="relative flex items-center">
         <a
           href="/"
@@ -88,6 +94,10 @@ export default function Navbar({ onVehiclesClick, variant = "dark" }) {
             onClick={() => {
               if (link.label === "VEHICLES") {
                 onVehiclesClick();
+              } else if (link.label === "PRICES") {
+                navigate("/prices");
+              } else if (link.label === "MONTHLY OFFER") {
+                navigate("/monthly-offer");
               }
               setActiveDropdown(null);
             }}
@@ -98,16 +108,19 @@ export default function Navbar({ onVehiclesClick, variant = "dark" }) {
       </div>
 
       <div className="flex items-center space-x-4 text-[0.850rem] font-semibold tracking-wider pt-2">
-        <button className="hidden md:flex items-center space-x-1 hover:text-gray-300 transition-colors">
-          {/* <Search size={16} /> */}
-          <span>SEARCH</span>
-        </button>
-        <button
-          className="p-1 hover:text-gray-300 transition-colors"
+        <Link to="/search">
+          <button className="hidden md:flex items-center space-x-1 hover:text-gray-300 transition-colors">
+            <span>SEARCH</span>
+          </button>
+        </Link>
+        <div
+          className="p-1 hover:text-gray-300 transition-colors focus:outline-none relative z-40"
           aria-label="Toggle Menu"
+          onClick={() => setNavOpen(true)}
         >
           <Menu size={22} />
-        </button>
+        </div>
+          <SideNavbar isopen={NavOpen} onClose={() => setNavOpen(false)} />
       </div>
     </nav>
   );

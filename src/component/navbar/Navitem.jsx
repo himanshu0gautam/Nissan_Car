@@ -22,6 +22,7 @@ export default function Navitem({
         className="flex items-center space-x-1 uppercase hover:text-gray-300 transition-colors focus:outline-none"
       >
         <span>{label}</span>
+
         {hasDropdown && (
           <ChevronDown
             size={14}
@@ -32,7 +33,7 @@ export default function Navitem({
 
       {/* Production Dropdown Feature */}
       {hasDropdown && isOpen && (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-68 bg-white/95 uppercase backdrop-blur-md text-black rounded shadow-xl border border-gray-100 overflow-hidden animate-fadeIn">
+        <div className="absolute top-full left-1/2 -translate-x-1/2 w-68 bg-white/95 uppercase backdrop-blur-md text-black rounded shadow-xl border border-gray-100 overflow-hidden animate-fadeIn">
           <ul className="py-2">
             {dropdownItems.map((item, index) => (
               <li key={index}>
