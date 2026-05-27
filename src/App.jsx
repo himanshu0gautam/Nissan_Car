@@ -8,17 +8,17 @@ import Footer from "./component/footer/Footer";
 import FloatingToolbar from "./component/FloatingTool/FloatingToolbar";
 import NissanHome from "./component/BottomSection/NissanHome";
 import Carousel from "./component/BottomSection/Carousel";
+import Vehicles from "./ExternalComponent/NavbarComponet/Vehicles";
 
 function App() {
   const [showToolbar, setShowToolbar] = useState(false);
+  const [showVehicles, setShowVehicles] = useState(false);
   const heroRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entries]) => {
-        setShowToolbar(!entries.isIntersecting);
-      },
-    );
+    const observer = new IntersectionObserver(([entries]) => {
+      setShowToolbar(!entries.isIntersecting);
+    });
     if (heroRef.current) {
       observer.observe(heroRef.current);
     }
@@ -31,8 +31,8 @@ function App() {
 
   return (
     <div className="relative w-full min-h-screen antialiased select-none font-sans">
-      <Navbar />
-
+      <Navbar onVehiclesClick={() => setShowVehicles(true)} />
+      {showVehicles && <Vehicles onClose={() => setShowVehicles(false)} />}
       {showToolbar && <FloatingToolbar />}
       <main>
         <div ref={heroRef}>
