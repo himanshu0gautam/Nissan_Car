@@ -26,7 +26,7 @@ function App() {
       if (heroRef.current) {
         observer.unobserve(heroRef.current);
       }
-    };
+    }
   }, []);
 
   return (
